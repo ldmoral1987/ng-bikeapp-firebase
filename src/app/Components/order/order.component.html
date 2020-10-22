@@ -1,1 +1,29 @@
-<p>order works!</p>
+
+    <p>Crear un nuevo pedido</p>
+    <form class="bikeForm" [formGroup]="this.orderService.form" (ngSubmit)="onSubmit()">
+        <input placeholder="Nombre del cliente" 
+            formControlName="customerName" 
+            type="text" 
+            class="input-field col s12">
+        <input placeholder="# pedido" 
+            formControlName="orderNumber" 
+            type="text" 
+            class="input-field col s12">
+
+        <button class="waves-effect waves-light btn col s4" 
+            *ngFor="let bike of bikeModels" (click)="addBike(bike)">
+            {{bike}}</button>
+
+            <ul class="collection">
+                <li *ngFor="let bike of bikeOrder">
+                    <span class="col s11"> {{ bike }} </span>
+                    <a class="col s1" (click)="removeBike(bike)">x</a>
+                </li>
+            </ul>
+
+        <button 
+            class="waves-effect waves-light btn col s12" 
+            (click)="onSubmit()">Tramitar pedido
+       </button>
+    </form> 
+

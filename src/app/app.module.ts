@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { OrderListComponent } from './Components/order-list/order-list.component';
 import { OrderComponent } from './Components/order/order.component';
 import { OrderManagmentService } from './Services/order-managment.service';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { OrderManagmentService } from './Services/order-managment.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [OrderManagmentService],
   bootstrap: [AppComponent]
