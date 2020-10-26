@@ -38,9 +38,24 @@ export class OrderComponent implements OnInit {
       this.bikeOrder.splice(index, 1);
   }
 
-  // Procesa el formulario
+  // Borra todas las bicicletas cuando reseteamos el formulario
+  clearBikes()
+  {
+    let size = this.bikeOrder.length
+    this.bikeOrder.splice(0, size);
+  }
+
+  // Procesa el formulario para crear el pedido
   onSubmit ()
   {
-    
+    this.orderService.form.value.bikeOrder = this.bikeOrder;
+    let data = this.orderService.form.value;
+    this.orderService.createBikeOrder(data)
+
+       .then(res => {
+
+       });
+
+
   }
 }

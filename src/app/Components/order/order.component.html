@@ -1,6 +1,10 @@
 
     <p><b>Registrar un nuevo pedido</b></p>
-    <form class="bikeForm" [formGroup]="this.orderService.form" (ngSubmit)="onSubmit()">
+    <form class="bikeForm" [formGroup]="this.orderService.form" (ngSubmit)="onSubmit();clearBikes();this.orderService.form.reset();">
+        <input placeholder="ID del cliente" 
+            formControlName="customerId" 
+            type="text" 
+            class="input-field col s12">
         <input placeholder="Nombre del cliente" 
             formControlName="customerName" 
             type="text" 
@@ -11,7 +15,7 @@
             class="input-field col s12">
 
         <button class="waves-effect waves-light btn col s4" 
-            *ngFor="let bike of bikeModels" (click)="addBike(bike)">
+            *ngFor="let bike of bikeModels" (click)="addBike(bike)" type="button">
             {{bike}}</button>
 
             <ul class="collection">
@@ -23,7 +27,11 @@
 
         <button 
             class="waves-effect waves-light btn col s12" 
-            (click)="onSubmit()">Tramitar pedido
+            type="submit">Tramitar pedido
        </button>
+       <button 
+       class="waves-effect waves-light btn col s12" 
+       type="reset" (click)="clearBikes()">Limpiar pedido
+        </button>
     </form> 
 
