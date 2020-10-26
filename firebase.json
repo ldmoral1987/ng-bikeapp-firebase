@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist\\ng-bikesapp-firebase",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
