@@ -1,6 +1,6 @@
 # NgBikesappFirebase
 
-Proyecto de un CRUD con Angular y Firebase. Este proyecto simula una aplicación de pedidos de bicicletas SPA. El proyecto está integrado con Firebase y conectado a su hosting y firestore correspondientes. Nota: el logo de Mondraker es propiedad de Mondraker (BLUE FACTORY TEAM S.L.U.)
+Proyecto de un CRUD con Angular y Firebase. Este proyecto simula una aplicación de pedidos de bicicletas SPA. El proyecto está integrado con Firebase y conectado a su hosting y firestore correspondientes. Nota: el logo de Mondraker es propiedad de Mondraker (BLUE FACTORY TEAM S.L.U.). La aplicación está actualmente hosteada en Google Firebase en la siguiente URL: https://ng-bikesapp-firebase.web.app/
 
 ## Development server
 
