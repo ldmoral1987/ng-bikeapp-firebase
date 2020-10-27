@@ -1,10 +1,11 @@
-<table class="order-list">
+<p><b>Lista de pedidos</b></p>
+<table id="order-list">
     <thead>
       <tr>
         <th># pedido</th>
-        <th>ID del cliente</th>
-        <th>Nombre del cliente</th>
+        <th>Cliente</th>
         <th>Bicicletas</th>
+        <th colspan="2">Operaciones</th>
       </tr>
     </thead>
   
@@ -14,10 +15,7 @@
         <td>
          {{ order.payload.doc.data().orderNumber }} 
         </td>
-        <td>
-          {{ order.payload.doc.data().customerId }} 
-         </td>
-        <td>{{ order.payload.doc.data().customerName }} </td>
+        <td>{{ order.payload.doc.data().customerId }} - {{ order.payload.doc.data().customerName }} </td>
         <td>
          <span *ngFor="let bike of order.payload.doc.data().bikeOrder">
             {{ bike }}
@@ -28,7 +26,6 @@
           (click)="markCompleted(order)">
           <i class="material-icons">check</i>
        </td>
-       <td>
        <td
           [hidden]="order.payload.doc.data().completed"
           (click)="deleteOrder(order)">

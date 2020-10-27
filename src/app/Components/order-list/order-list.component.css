@@ -1,0 +1,23 @@
+#order-list {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+  
+  #order-list td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #order-list tr:nth-child(even){background-color: #596aff;}
+  
+  #order-list tr:hover {background-color: rgb(137, 202, 140);}
+  
+  #order-list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
