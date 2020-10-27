@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrderListComponent } from './Components/order-list/order-list.component';
 import { OrderComponent } from './Components/order/order.component';
-import { OrderManagmentService } from './Services/order-managment.service';
+import { OrderManagementService } from './Services/order-managment.service';
 import { ReactiveFormsModule } from "@angular/forms";
 
 import { environment } from "src/environments/environment";
@@ -25,7 +25,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule
   ],
-  providers: [OrderManagmentService],
+  providers: [OrderManagementService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

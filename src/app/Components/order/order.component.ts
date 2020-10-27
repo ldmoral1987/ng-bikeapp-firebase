@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderManagmentService } from '../../Services/order-managment.service';
+import { OrderManagementService } from '../../Services/order-managment.service';
 
 @Component({
   selector: 'app-order',
@@ -18,7 +18,7 @@ export class OrderComponent implements OnInit {
 
   // Se inyecta el servicio de gestión en el constructor
   // del componente usando el atributo de clase orderService
-  constructor(public orderService:OrderManagmentService) { }
+  constructor(public orderService:OrderManagementService) { }
 
   ngOnInit(): void {
   }
@@ -50,12 +50,6 @@ export class OrderComponent implements OnInit {
   {
     this.orderService.form.value.bikeOrder = this.bikeOrder;
     let data = this.orderService.form.value;
-    this.orderService.createBikeOrder(data)
-
-       .then(res => {
-
-       });
-
-
+    this.orderService.createBikeOrder(data);
   }
 }

@@ -1,36 +1,37 @@
-<table>
+<table class="order-list">
     <thead>
       <tr>
         <th># pedido</th>
+        <th>ID del cliente</th>
         <th>Nombre del cliente</th>
-        <th>Coffee List</th>
+        <th>Bicicletas</th>
       </tr>
     </thead>
   
     <tbody>
-      <tr>
-    <!-- <tr *ngFor="let order of coffeeOrders"> --> 
+    
+     <tr *ngFor="let order of bikeOrders">
         <td>
-        <!-- {{ order.payload.doc.data().orderNumber }} --> 
+         {{ order.payload.doc.data().orderNumber }} 
         </td>
-        <td><!--{{ order.payload.doc.data().customerName }}--> </td>
         <td>
-        <!--  <span *ngFor="let coffee of order.payload.doc.data().coffeeOrder"> -->
-            <!--{{ coffee }}-->
-          <!-- </span> -->
+          {{ order.payload.doc.data().customerId }} 
+         </td>
+        <td>{{ order.payload.doc.data().customerName }} </td>
+        <td>
+         <span *ngFor="let bike of order.payload.doc.data().bikeOrder">
+            {{ bike }}
+           </span>
         </td>
-        <!--<td
+        <td
           [hidden]="order.payload.doc.data().completed"
-          (click)="markCompleted(order)"
-        >-->
-       <td>
+          (click)="markCompleted(order)">
           <i class="material-icons">check</i>
        </td>
        <td>
-       <!-- <td
+       <td
           [hidden]="order.payload.doc.data().completed"
-          (click)="deleteOrder(order)"
-        >-->
+          (click)="deleteOrder(order)">
           <i class="material-icons">delete_forever</i>
         </td>
       </tr>
