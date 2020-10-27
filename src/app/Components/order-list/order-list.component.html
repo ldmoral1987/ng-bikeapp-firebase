@@ -18,7 +18,7 @@
         <td>{{ order.payload.doc.data().customerId }} - {{ order.payload.doc.data().customerName }} </td>
         <td>
          <span *ngFor="let bike of order.payload.doc.data().bikeOrder">
-            {{ bike }}
+            {{ bike }} | 
            </span>
         </td>
         <td
